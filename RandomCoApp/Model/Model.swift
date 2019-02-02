@@ -8,13 +8,33 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class User: Object {
-    @objc dynamic var name: String?
+class User: Object, Mappable {
+    @objc dynamic var firstName: String?
     @objc dynamic var lastName: String?
     @objc dynamic var email: String?
     @objc dynamic var cell: String?
     @objc dynamic var largeImage: String?
     @objc dynamic var thumbnail: String?
     @objc dynamic var id: String?
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        firstName <- map["name.first"]
+        lastName <- map["name.last"]
+        id <- map["login.uuid"]
+        cell <- map["cell"]
+        email <- map["email"]
+        largeImage <- map["picture.large"]
+        thumbnail <- map["picture.thumbnail"]
+        
+    }
 }
