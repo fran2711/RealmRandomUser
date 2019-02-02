@@ -12,9 +12,12 @@
 		94EC5A8322058A1400905893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5A8122058A1400905893 /* Main.storyboard */; };
 		94EC5A8522058A1600905893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5A8422058A1600905893 /* Assets.xcassets */; };
 		94EC5A8822058A1600905893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5A8622058A1600905893 /* LaunchScreen.storyboard */; };
+		94EC5A9122058F1400905893 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5A9022058F1400905893 /* Model.swift */; };
+		9BF7E5A90E6BA32AA01121F0 /* Pods_RandomCoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomCoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EC5A7A22058A1400905893 /* RandomCoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomCoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EC5A7D22058A1400905893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EC5A7F22058A1400905893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		94EC5A8422058A1600905893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EC5A8722058A1600905893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EC5A8922058A1600905893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EC5A9022058F1400905893 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.release.xcconfig"; sourceTree = "<group>"; };
+		AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF7E5A90E6BA32AA01121F0 /* Pods_RandomCoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				94EC5A7C22058A1400905893 /* RandomCoApp */,
 				94EC5A7B22058A1400905893 /* Products */,
+				F390510BC9E16A1C8EDEC4B7 /* Pods */,
+				CB3CFBDC72276D44E155CAD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,7 @@
 		94EC5A7C22058A1400905893 /* RandomCoApp */ = {
 			isa = PBXGroup;
 			children = (
+				94EC5A8F22058C8700905893 /* Model */,
 				94EC5A7D22058A1400905893 /* AppDelegate.swift */,
 				94EC5A7F22058A1400905893 /* ViewController.swift */,
 				94EC5A8122058A1400905893 /* Main.storyboard */,
@@ -64,6 +74,31 @@
 			path = RandomCoApp;
 			sourceTree = "<group>";
 		};
+		94EC5A8F22058C8700905893 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94EC5A9022058F1400905893 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB3CFBDC72276D44E155CAD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F390510BC9E16A1C8EDEC4B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */,
+				9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EC5A8C22058A1600905893 /* Build configuration list for PBXNativeTarget "RandomCoApp" */;
 			buildPhases = (
+				1C4C8D2CB82C607EBB0EDAC1 /* [CP] Check Pods Manifest.lock */,
 				94EC5A7622058A1400905893 /* Sources */,
 				94EC5A7722058A1400905893 /* Frameworks */,
 				94EC5A7822058A1400905893 /* Resources */,
+				D6EECB9B4329AF413E88063D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +167,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C4C8D2CB82C607EBB0EDAC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomCoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6EECB9B4329AF413E88063D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94EC5A7622058A1400905893 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EC5A9122058F1400905893 /* Model.swift in Sources */,
 				94EC5A8022058A1400905893 /* ViewController.swift in Sources */,
 				94EC5A7E22058A1400905893 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +375,7 @@
 		};
 		94EC5A8D22058A1600905893 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +394,7 @@
 		};
 		94EC5A8E22058A1600905893 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
