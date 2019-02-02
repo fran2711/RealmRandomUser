@@ -14,7 +14,7 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - TableViewDataSource and Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DBManager.sharedInstance.getData().count
+        return DBManager.sharedInstance.getUserData().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,18 +24,18 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configureWith(user: DBManager.sharedInstance.getData()[indexPath.row])
+        cell.configureWith(user: DBManager.sharedInstance.getUserData()[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedUser = DBManager.sharedInstance.getData()[indexPath.row]
+        self.selectedUser = DBManager.sharedInstance.getUserData()[indexPath.row]
         self.performSegue(withIdentifier: "ShowUserDetail", sender: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastElement = DBManager.sharedInstance.getData().count - 1
+        let lastElement = DBManager.sharedInstance.getUserData().count - 1
         if indexPath.row == lastElement {
             DispatchQueue.main.async {
                 self.actualPage += 1

@@ -39,11 +39,12 @@ class UsersTableViewController: UIViewController {
                         return
                 }
                 for user in usersArray {
-                    if let user = User(JSON: user) {
-                        DBManager.sharedInstance.addData(user: user)
-                        DispatchQueue.main.async {
-                            self.usersTableView.reloadData()
-                        }
+                    if  let user = User(JSON: user)  {
+                        DBManager.sharedInstance.addUserData(user: user)                        
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.usersTableView.reloadData()
                     }
                 }
             case .failure(let error):
@@ -51,6 +52,7 @@ class UsersTableViewController: UIViewController {
             }
             self.activityIndicator.stopAnimating()
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

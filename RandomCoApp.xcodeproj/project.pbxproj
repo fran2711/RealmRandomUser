@@ -19,6 +19,7 @@
 		94EC5AA32205B60A00905893 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AA22205B60A00905893 /* DBManager.swift */; };
 		94EC5AA72205C2A400905893 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AA62205C2A400905893 /* UserDetailViewController.swift */; };
 		94EC5AAA2205C50A00905893 /* UserDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5AA92205C50A00905893 /* UserDetailView.storyboard */; };
+		94EC5AAC22064F9C00905893 /* UtilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AAB22064F9C00905893 /* UtilExtensions.swift */; };
 		9BF7E5A90E6BA32AA01121F0 /* Pods_RandomCoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		94EC5AA22205B60A00905893 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		94EC5AA62205C2A400905893 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		94EC5AA92205C50A00905893 /* UserDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailView.storyboard; sourceTree = "<group>"; };
+		94EC5AAB22064F9C00905893 /* UtilExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilExtensions.swift; sourceTree = "<group>"; };
 		9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			children = (
 				94EC5A7D22058A1400905893 /* AppDelegate.swift */,
 				94EC5A942205970B00905893 /* Constants.swift */,
+				94EC5AAB22064F9C00905893 /* UtilExtensions.swift */,
 				94EC5A8622058A1600905893 /* LaunchScreen.storyboard */,
 				94EC5A93220596EB00905893 /* Views */,
 				94EC5A92220596D300905893 /* Controllers */,
@@ -308,6 +311,7 @@
 				94EC5A992205AE0000905893 /* UsersTableViewController+UITableView.swift in Sources */,
 				94EC5AA72205C2A400905893 /* UserDetailViewController.swift in Sources */,
 				94EC5A8022058A1400905893 /* UsersTableViewController.swift in Sources */,
+				94EC5AAC22064F9C00905893 /* UtilExtensions.swift in Sources */,
 				94EC5A7E22058A1400905893 /* AppDelegate.swift in Sources */,
 				94EC5AA02205B08A00905893 /* UsersTableViewCell.swift in Sources */,
 				94EC5A952205970B00905893 /* Constants.swift in Sources */,

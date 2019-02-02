@@ -17,12 +17,14 @@ class DBManager {
         dataBase = try! Realm()
     }
     
-    func getData() -> Results<User> {
+    // MARK: - User Manager
+    
+    func getUserData() -> Results<User> {
         let results: Results<User> = dataBase.objects(User.self)
         return results
     }
-    
-    func addData(user: User) {
+   
+    func addUserData(user: User) {
         do {
             try dataBase.write {
                 dataBase.add(user, update: true)
@@ -33,7 +35,7 @@ class DBManager {
         }
     }
     
-    func deleteData(user: User) {
+    func deleteUserData(user: User) {
         do {
             try dataBase.write {
                 dataBase.delete(user)
