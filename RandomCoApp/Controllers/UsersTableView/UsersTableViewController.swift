@@ -13,20 +13,24 @@ import RealmSwift
 class UsersTableViewController: UIViewController {
     
     @IBOutlet weak var usersTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var actualPage: Int = 0
+    let cellIdentifier = "CellForUsers"    
+    var selectedUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()        
         callForUsers(actualPage)
     }
     
-    
     func callForUsers(_ actualPage: Int) {
+        if activityIndicator.isAnimating == false {
+            activityIndicator.startAnimating()
+        }
         let url = Constants.baseUrl + Constants.pageCount + String(actualPage) + Constants.resultsNumber
         
         Alamofire.request(url).responseJSON { response in
-            
             switch response.result {
             case .success(_):
                 guard let responseJSON = response.result.value as? [String: AnyObject],
@@ -34,33 +38,29 @@ class UsersTableViewController: UIViewController {
                         print("Error while fetching users: \(String(describing: response.result.error))")
                         return
                 }
-                
-                do {
-                    let realm = try Realm()
-                    try realm.write {
-                        for user in usersArray {
-                            if let user = User(JSON: user) {
-                                realm.add(user, update: true)
-                                print(user)
-                                //                    DispatchQueue.main.async {
-                                ////                        self.userTableView.reloadData()
-                                //                    }
-                            }
+                for user in usersArray {
+                    if let user = User(JSON: user) {
+                        DBManager.sharedInstance.addData(user: user)
+                        DispatchQueue.main.async {
+                            self.usersTableView.reloadData()
                         }
                     }
-                } catch let error as NSError {
-                    print("ERROR ----\n\(error)")
                 }
             case .failure(let error):
                 print("ERROR ----\n\(error)")
             }
-            
-            
-            //
-            //
-            //            self.activityIndicator.stopAnimating()
+            self.activityIndicator.stopAnimating()
         }
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowUserDetail" {
+            guard let vController: UserDetailViewController = segue.destination as? UserDetailViewController else {
+                print("ERROR VIEWCONTROLLER IN PREPARE SEGUE")
+                 return
+            }
+            vController.currentUser = self.selectedUser
+        }
     }
     
     

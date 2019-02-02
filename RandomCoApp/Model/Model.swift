@@ -11,13 +11,13 @@ import RealmSwift
 import ObjectMapper
 
 class User: Object, Mappable {
-    @objc dynamic var firstName: String?
-    @objc dynamic var lastName: String?
-    @objc dynamic var email: String?
-    @objc dynamic var cell: String?
-    @objc dynamic var largeImage: String?
-    @objc dynamic var thumbnail: String?
-    @objc dynamic var id: String?
+    @objc dynamic var firstName: String = ""
+    @objc dynamic var lastName: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var phone: String = ""
+    @objc dynamic var largeImage: String = ""
+    @objc dynamic var thumbnail: String = ""
+    @objc dynamic var id: String = ""
     
     override static func primaryKey() -> String? {
         return "id"
@@ -31,7 +31,7 @@ class User: Object, Mappable {
         firstName <- map["name.first"]
         lastName <- map["name.last"]
         id <- map["login.uuid"]
-        cell <- map["cell"]
+        phone <- map["cell"]
         email <- map["email"]
         largeImage <- map["picture.large"]
         thumbnail <- map["picture.thumbnail"]

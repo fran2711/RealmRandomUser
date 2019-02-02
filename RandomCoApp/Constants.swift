@@ -12,4 +12,5 @@ public enum Constants {
     static let baseUrl = "https://randomuser.me/api/"
     static let pageCount = "?page="
     static let resultsNumber = "&results=20"
+    static let uuidCall = "?uuid="
 }
