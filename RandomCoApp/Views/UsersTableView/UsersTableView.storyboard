@@ -118,9 +118,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pp1-Yv-LN4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Users" id="42o-3j-Xgn"/>
+                    <navigationItem key="navigationItem" title="Users" id="42o-3j-Xgn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W8e-iQ-Zvs">
+                            <connections>
+                                <action selector="addUsersButtonPressed:" destination="VQ2-XG-Wya" id="ZxD-jQ-J4Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="Fw3-Cl-Hsi" id="kEt-pT-imG"/>
+                        <outlet property="addUsersButton" destination="W8e-iQ-Zvs" id="pQQ-iu-Q8o"/>
                         <outlet property="usersTableView" destination="68n-b3-tbP" id="NnO-W4-yDk"/>
                         <segue destination="G3t-5T-AQ8" kind="show" identifier="ShowUserDetail" id="ErN-FY-qbo"/>
                     </connections>

@@ -33,16 +33,4 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
         self.selectedUser = DBManager.sharedInstance.getUserData()[indexPath.row]
         self.performSegue(withIdentifier: "ShowUserDetail", sender: indexPath.row)
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastElement = DBManager.sharedInstance.getUserData().count - 1
-        if indexPath.row == lastElement {
-            DispatchQueue.main.async {
-                self.actualPage += 1
-                self.callForUsers(self.actualPage)
-            }
-        }
-    }
-    
-    
 }

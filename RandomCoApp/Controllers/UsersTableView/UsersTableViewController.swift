@@ -14,6 +14,7 @@ class UsersTableViewController: UIViewController {
     
     @IBOutlet weak var usersTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addUsersButton: UIBarButtonItem!
     
     var actualPage: Int = 0
     let cellIdentifier = "CellForUsers"    
@@ -65,6 +66,12 @@ class UsersTableViewController: UIViewController {
         }
     }
     
+    @IBAction func addUsersButtonPressed(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.actualPage += 1
+            self.callForUsers(self.actualPage)
+        }
+    }
     
 }
 
