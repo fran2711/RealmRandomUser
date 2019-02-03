@@ -110,9 +110,9 @@
 				94EC5A942205970B00905893 /* Constants.swift */,
 				94EC5AAB22064F9C00905893 /* UtilExtensions.swift */,
 				94EC5A8622058A1600905893 /* LaunchScreen.storyboard */,
+				94EC5A8F22058C8700905893 /* Model */,
 				94EC5A93220596EB00905893 /* Views */,
 				94EC5A92220596D300905893 /* Controllers */,
-				94EC5A8F22058C8700905893 /* Model */,
 				94EC5A8422058A1600905893 /* Assets.xcassets */,
 				94EC5A8922058A1600905893 /* Info.plist */,
 			);
