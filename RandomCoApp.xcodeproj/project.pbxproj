@@ -20,8 +20,20 @@
 		94EC5AA72205C2A400905893 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AA62205C2A400905893 /* UserDetailViewController.swift */; };
 		94EC5AAA2205C50A00905893 /* UserDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5AA92205C50A00905893 /* UserDetailView.storyboard */; };
 		94EC5AAC22064F9C00905893 /* UtilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AAB22064F9C00905893 /* UtilExtensions.swift */; };
+		94EC5AC422066ED800905893 /* RandomCoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AC322066ED800905893 /* RandomCoAppUITests.swift */; };
+		94EC5ACC22067CD400905893 /* UsersTableViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */; };
 		9BF7E5A90E6BA32AA01121F0 /* Pods_RandomCoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94EC5AC622066ED800905893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94EC5A7222058A1400905893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94EC5A7922058A1400905893;
+			remoteInfo = RandomCoApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomCoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +52,10 @@
 		94EC5AA62205C2A400905893 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		94EC5AA92205C50A00905893 /* UserDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailView.storyboard; sourceTree = "<group>"; };
 		94EC5AAB22064F9C00905893 /* UtilExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilExtensions.swift; sourceTree = "<group>"; };
+		94EC5AC122066ED800905893 /* RandomCoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomCoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94EC5AC322066ED800905893 /* RandomCoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoAppUITests.swift; sourceTree = "<group>"; };
+		94EC5AC522066ED800905893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersTableViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +69,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94EC5ABE22066ED800905893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				94EC5A7C22058A1400905893 /* RandomCoApp */,
+				94EC5AC222066ED800905893 /* RandomCoAppUITests */,
 				94EC5A7B22058A1400905893 /* Products */,
 				F390510BC9E16A1C8EDEC4B7 /* Pods */,
 				CB3CFBDC72276D44E155CAD8 /* Frameworks */,
@@ -70,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				94EC5A7A22058A1400905893 /* RandomCoApp.app */,
+				94EC5AC122066ED800905893 /* RandomCoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +164,7 @@
 			children = (
 				94EC5A7F22058A1400905893 /* UsersTableViewController.swift */,
 				94EC5A982205AE0000905893 /* UsersTableViewController+UITableView.swift */,
+				94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */,
 			);
 			path = UsersTableView;
 			sourceTree = "<group>";
@@ -157,6 +183,15 @@
 				94EC5AA92205C50A00905893 /* UserDetailView.storyboard */,
 			);
 			path = UserDetailView;
+			sourceTree = "<group>";
+		};
+		94EC5AC222066ED800905893 /* RandomCoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94EC5AC322066ED800905893 /* RandomCoAppUITests.swift */,
+				94EC5AC522066ED800905893 /* Info.plist */,
+			);
+			path = RandomCoAppUITests;
 			sourceTree = "<group>";
 		};
 		CB3CFBDC72276D44E155CAD8 /* Frameworks */ = {
@@ -198,6 +233,24 @@
 			productReference = 94EC5A7A22058A1400905893 /* RandomCoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94EC5AC022066ED800905893 /* RandomCoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94EC5AC822066ED800905893 /* Build configuration list for PBXNativeTarget "RandomCoAppUITests" */;
+			buildPhases = (
+				94EC5ABD22066ED800905893 /* Sources */,
+				94EC5ABE22066ED800905893 /* Frameworks */,
+				94EC5ABF22066ED800905893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94EC5AC722066ED800905893 /* PBXTargetDependency */,
+			);
+			name = RandomCoAppUITests;
+			productName = RandomCoAppUITests;
+			productReference = 94EC5AC122066ED800905893 /* RandomCoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +263,10 @@
 				TargetAttributes = {
 					94EC5A7922058A1400905893 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					94EC5AC022066ED800905893 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 94EC5A7922058A1400905893;
 					};
 				};
 			};
@@ -227,6 +284,7 @@
 			projectRoot = "";
 			targets = (
 				94EC5A7922058A1400905893 /* RandomCoApp */,
+				94EC5AC022066ED800905893 /* RandomCoAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +298,13 @@
 				94EC5AAA2205C50A00905893 /* UserDetailView.storyboard in Resources */,
 				94EC5A9B2205AEEA00905893 /* UsersTableView.storyboard in Resources */,
 				94EC5A8522058A1600905893 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94EC5ABF22066ED800905893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,11 +380,28 @@
 				94EC5A7E22058A1400905893 /* AppDelegate.swift in Sources */,
 				94EC5AA02205B08A00905893 /* UsersTableViewCell.swift in Sources */,
 				94EC5A952205970B00905893 /* Constants.swift in Sources */,
+				94EC5ACC22067CD400905893 /* UsersTableViewController+SearchBar.swift in Sources */,
 				94EC5AA32205B60A00905893 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94EC5ABD22066ED800905893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94EC5AC422066ED800905893 /* RandomCoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94EC5AC722066ED800905893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94EC5A7922058A1400905893 /* RandomCoApp */;
+			targetProxy = 94EC5AC622066ED800905893 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94EC5A8622058A1600905893 /* LaunchScreen.storyboard */ = {
@@ -487,6 +569,44 @@
 			};
 			name = Release;
 		};
+		94EC5AC922066ED800905893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJB52HYPRJ;
+				INFOPLIST_FILE = RandomCoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjlucena.RandomCoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RandomCoApp;
+			};
+			name = Debug;
+		};
+		94EC5ACA22066ED800905893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJB52HYPRJ;
+				INFOPLIST_FILE = RandomCoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fjlucena.RandomCoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RandomCoApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -504,6 +624,15 @@
 			buildConfigurations = (
 				94EC5A8D22058A1600905893 /* Debug */,
 				94EC5A8E22058A1600905893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94EC5AC822066ED800905893 /* Build configuration list for PBXNativeTarget "RandomCoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94EC5AC922066ED800905893 /* Debug */,
+				94EC5ACA22066ED800905893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

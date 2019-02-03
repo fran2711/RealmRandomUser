@@ -34,8 +34,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MX2-UG-RAs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="68n-b3-tbP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellForUsers" rowHeight="100" id="nWR-BE-O5o" customClass="UsersTableViewCell" customModule="RandomCoApp" customModuleProvider="target">
@@ -124,11 +128,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MX2-UG-RAs" firstAttribute="top" secondItem="pp1-Yv-LN4" secondAttribute="top" id="1Cj-nk-bAp"/>
+                            <constraint firstItem="MX2-UG-RAs" firstAttribute="leading" secondItem="pp1-Yv-LN4" secondAttribute="leading" id="4jl-NM-MeS"/>
                             <constraint firstItem="Fw3-Cl-Hsi" firstAttribute="centerX" secondItem="pp1-Yv-LN4" secondAttribute="centerX" id="58u-Gn-bnb"/>
-                            <constraint firstItem="68n-b3-tbP" firstAttribute="top" secondItem="pp1-Yv-LN4" secondAttribute="top" id="6nE-3N-dMQ"/>
                             <constraint firstItem="68n-b3-tbP" firstAttribute="leading" secondItem="pp1-Yv-LN4" secondAttribute="leading" id="N1Y-ms-9bs"/>
+                            <constraint firstItem="pp1-Yv-LN4" firstAttribute="trailing" secondItem="MX2-UG-RAs" secondAttribute="trailing" id="NVM-Q4-FQs"/>
                             <constraint firstItem="pp1-Yv-LN4" firstAttribute="trailing" secondItem="68n-b3-tbP" secondAttribute="trailing" id="tet-6o-MVE"/>
                             <constraint firstItem="Fw3-Cl-Hsi" firstAttribute="centerY" secondItem="pp1-Yv-LN4" secondAttribute="centerY" id="vQX-aA-oLg"/>
+                            <constraint firstItem="68n-b3-tbP" firstAttribute="top" secondItem="MX2-UG-RAs" secondAttribute="bottom" id="wNn-uc-exm"/>
                             <constraint firstItem="pp1-Yv-LN4" firstAttribute="bottom" secondItem="68n-b3-tbP" secondAttribute="bottom" id="ykF-ol-Vos"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pp1-Yv-LN4"/>
@@ -143,6 +150,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Fw3-Cl-Hsi" id="kEt-pT-imG"/>
                         <outlet property="addUsersButton" destination="W8e-iQ-Zvs" id="pQQ-iu-Q8o"/>
+                        <outlet property="usersSearchBar" destination="MX2-UG-RAs" id="vfa-Kc-jcl"/>
                         <outlet property="usersTableView" destination="68n-b3-tbP" id="NnO-W4-yDk"/>
                         <segue destination="G3t-5T-AQ8" kind="show" identifier="ShowUserDetail" id="ErN-FY-qbo"/>
                     </connections>

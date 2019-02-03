@@ -13,7 +13,6 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, 
 
     
     // MARK: - TableViewDataSource and Delegates
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DBManager.sharedInstance.getUserData().count
     }
@@ -48,22 +47,10 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, 
     }
     
     // MARK: - Cell Delegate Methods
-    
     func didPressFavouriteButton(sender: UIButton, indexPath: Int) {
-        if sender.isTouchInside {
-            print("Button tapped")
-            if sender.isSelected  {
-                let user = DBManager.sharedInstance.getUserData()[indexPath]
-                DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: false)
-                sender.isSelected = false
-            } else {
-                let user = DBManager.sharedInstance.getUserData()[indexPath]
-                DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: true)
-                sender.isSelected = true
-            }
-        }
-        
-
-        
+        let user = DBManager.sharedInstance.getUserData()[indexPath]
+        DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: sender.isTouchInside)
+        sender.isSelected = user.isFavorite
     }
+    
 }

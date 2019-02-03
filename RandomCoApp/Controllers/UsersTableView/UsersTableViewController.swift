@@ -15,6 +15,7 @@ class UsersTableViewController: UIViewController {
     @IBOutlet weak var usersTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var addUsersButton: UIBarButtonItem!
+    @IBOutlet weak var usersSearchBar: UISearchBar!
     
     var actualPage: Int = 0
     let cellIdentifier = "CellForUsers"    

@@ -30,6 +30,8 @@ class UsersTableViewCell: UITableViewCell {
         self.userNameLabel.text = user.firstName + " " + user.lastName
         self.userEmailLabel.text = user.email
         self.userPhoneLabel.text = user.phone
+        
+        self.favouriteButton.isSelected = user.isFavorite
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
