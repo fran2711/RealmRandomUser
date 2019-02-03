@@ -18,10 +18,14 @@ class DBManager {
     }
     
     // MARK: - User Manager
-    
     func getUserData() -> Results<User> {
         let results: Results<User> = dataBase.objects(User.self)
         return results
+    }
+    
+    func getFavouriteUsers() -> Results<User> {
+        let predicate = NSPredicate(format: "isFavorite == %@",  NSNumber(value: true))
+        return dataBase.objects(User.self).filter(predicate)
     }
    
     func addUserData(user: User) {

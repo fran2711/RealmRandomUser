@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, UsersTableViewCellDelegate {
-
     
     // MARK: - TableViewDataSource and Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +26,6 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, 
         cell.cellDelegate = self
         cell.configureWith(user: DBManager.sharedInstance.getUserData()[indexPath.row])
         cell.favouriteButton.tag = indexPath.row
-        
         return cell
     }
     

@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_no_photo" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-my-2QH">
-                                <rect key="frame" x="132.5" y="84" width="55" height="55"/>
+                                <rect key="frame" x="118" y="84" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p0l-my-2QH" secondAttribute="height" multiplier="1:1" id="K7Q-5a-Cot"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-KI-IIK">
-                                <rect key="frame" x="16" y="189" width="288" height="360"/>
+                                <rect key="frame" x="16" y="198" width="288" height="360"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-nw-JF8">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -183,8 +183,9 @@
                             <constraint firstItem="SBq-KI-IIK" firstAttribute="leading" secondItem="3aa-Jf-wPZ" secondAttribute="leading" constant="16" id="72E-70-4gq"/>
                             <constraint firstItem="SBq-KI-IIK" firstAttribute="centerX" secondItem="3aa-Jf-wPZ" secondAttribute="centerX" id="PlF-ed-w28"/>
                             <constraint firstItem="3aa-Jf-wPZ" firstAttribute="trailing" secondItem="SBq-KI-IIK" secondAttribute="trailing" constant="16" id="ScW-Wi-479"/>
+                            <constraint firstItem="3aa-Jf-wPZ" firstAttribute="bottom" secondItem="SBq-KI-IIK" secondAttribute="bottom" constant="10" id="Uan-YP-XIP"/>
                             <constraint firstItem="p0l-my-2QH" firstAttribute="top" secondItem="3aa-Jf-wPZ" secondAttribute="top" constant="20" id="cpx-84-TDL"/>
-                            <constraint firstItem="SBq-KI-IIK" firstAttribute="top" secondItem="p0l-my-2QH" secondAttribute="bottom" constant="50" id="dwP-aN-Az0"/>
+                            <constraint firstItem="SBq-KI-IIK" firstAttribute="top" secondItem="p0l-my-2QH" secondAttribute="bottom" constant="30" id="dwP-aN-Az0"/>
                             <constraint firstItem="p0l-my-2QH" firstAttribute="centerX" secondItem="3aa-Jf-wPZ" secondAttribute="centerX" id="yhO-We-tgb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3aa-Jf-wPZ"/>

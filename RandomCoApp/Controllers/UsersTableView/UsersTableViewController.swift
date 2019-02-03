@@ -15,16 +15,16 @@ class UsersTableViewController: UIViewController {
     @IBOutlet weak var usersTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var addUsersButton: UIBarButtonItem!
-    @IBOutlet weak var usersSearchBar: UISearchBar!
     
     var actualPage: Int = 0
     let cellIdentifier = "CellForUsers"    
-    var selectedUser: User?
-    
-    var users: Results<User>?
+    var selectedUser: User?    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.usersTableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        
         if DBManager.sharedInstance.getUserData().isEmpty {
             callForUsers(actualPage)
         }
@@ -77,5 +77,5 @@ class UsersTableViewController: UIViewController {
             self.callForUsers(self.actualPage)
         }
     }
+    
 }
-

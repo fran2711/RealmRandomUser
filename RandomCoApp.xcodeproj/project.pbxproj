@@ -21,7 +21,9 @@
 		94EC5AAA2205C50A00905893 /* UserDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5AA92205C50A00905893 /* UserDetailView.storyboard */; };
 		94EC5AAC22064F9C00905893 /* UtilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AAB22064F9C00905893 /* UtilExtensions.swift */; };
 		94EC5AC422066ED800905893 /* RandomCoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5AC322066ED800905893 /* RandomCoAppUITests.swift */; };
-		94EC5ACC22067CD400905893 /* UsersTableViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */; };
+		94EC5ACF22070A1400905893 /* FavouriteUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC5ACE22070A1400905893 /* FavouriteUsersViewController.swift */; };
+		94EC5AD222070BAE00905893 /* FavouriteUsersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5AD122070BAE00905893 /* FavouriteUsersView.storyboard */; };
+		94EC5AD42207174900905893 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EC5AD32207174900905893 /* UsersTableViewCell.xib */; };
 		9BF7E5A90E6BA32AA01121F0 /* Pods_RandomCoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A39629F08A412E46C89B7B1 /* Pods_RandomCoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +57,9 @@
 		94EC5AC122066ED800905893 /* RandomCoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomCoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EC5AC322066ED800905893 /* RandomCoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoAppUITests.swift; sourceTree = "<group>"; };
 		94EC5AC522066ED800905893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersTableViewController+SearchBar.swift"; sourceTree = "<group>"; };
+		94EC5ACE22070A1400905893 /* FavouriteUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteUsersViewController.swift; sourceTree = "<group>"; };
+		94EC5AD122070BAE00905893 /* FavouriteUsersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteUsersView.storyboard; sourceTree = "<group>"; };
+		94EC5AD32207174900905893 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		9D6923FAECCAFD3E85C2C608 /* Pods-RandomCoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.release.xcconfig"; sourceTree = "<group>"; };
 		AED128EFCC70859C2B0C2DE6 /* Pods-RandomCoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomCoApp/Pods-RandomCoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 		94EC5A92220596D300905893 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94EC5ACD220709F900905893 /* FavouriteUsersView */,
 				94EC5AA52205C28C00905893 /* UserDetail */,
 				94EC5AA42205C27900905893 /* UsersTableView */,
 			);
@@ -136,6 +141,7 @@
 		94EC5A93220596EB00905893 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				94EC5AD022070B9000905893 /* FavouriteUsersView */,
 				94EC5AA82205C4EE00905893 /* UserDetailView */,
 				94EC5A9D2205AF9A00905893 /* UsersTableViewCell */,
 				94EC5A9C2205AF4100905893 /* UsersTableView */,
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				94EC5A9E2205B08A00905893 /* UsersTableViewCell.swift */,
+				94EC5AD32207174900905893 /* UsersTableViewCell.xib */,
 			);
 			path = UsersTableViewCell;
 			sourceTree = "<group>";
@@ -164,7 +171,6 @@
 			children = (
 				94EC5A7F22058A1400905893 /* UsersTableViewController.swift */,
 				94EC5A982205AE0000905893 /* UsersTableViewController+UITableView.swift */,
-				94EC5ACB22067CD400905893 /* UsersTableViewController+SearchBar.swift */,
 			);
 			path = UsersTableView;
 			sourceTree = "<group>";
@@ -192,6 +198,22 @@
 				94EC5AC522066ED800905893 /* Info.plist */,
 			);
 			path = RandomCoAppUITests;
+			sourceTree = "<group>";
+		};
+		94EC5ACD220709F900905893 /* FavouriteUsersView */ = {
+			isa = PBXGroup;
+			children = (
+				94EC5ACE22070A1400905893 /* FavouriteUsersViewController.swift */,
+			);
+			path = FavouriteUsersView;
+			sourceTree = "<group>";
+		};
+		94EC5AD022070B9000905893 /* FavouriteUsersView */ = {
+			isa = PBXGroup;
+			children = (
+				94EC5AD122070BAE00905893 /* FavouriteUsersView.storyboard */,
+			);
+			path = FavouriteUsersView;
 			sourceTree = "<group>";
 		};
 		CB3CFBDC72276D44E155CAD8 /* Frameworks */ = {
@@ -294,7 +316,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EC5AD222070BAE00905893 /* FavouriteUsersView.storyboard in Resources */,
 				94EC5A8822058A1600905893 /* LaunchScreen.storyboard in Resources */,
+				94EC5AD42207174900905893 /* UsersTableViewCell.xib in Resources */,
 				94EC5AAA2205C50A00905893 /* UserDetailView.storyboard in Resources */,
 				94EC5A9B2205AEEA00905893 /* UsersTableView.storyboard in Resources */,
 				94EC5A8522058A1600905893 /* Assets.xcassets in Resources */,
@@ -377,10 +401,10 @@
 				94EC5AA72205C2A400905893 /* UserDetailViewController.swift in Sources */,
 				94EC5A8022058A1400905893 /* UsersTableViewController.swift in Sources */,
 				94EC5AAC22064F9C00905893 /* UtilExtensions.swift in Sources */,
+				94EC5ACF22070A1400905893 /* FavouriteUsersViewController.swift in Sources */,
 				94EC5A7E22058A1400905893 /* AppDelegate.swift in Sources */,
 				94EC5AA02205B08A00905893 /* UsersTableViewCell.swift in Sources */,
 				94EC5A952205970B00905893 /* Constants.swift in Sources */,
-				94EC5ACC22067CD400905893 /* UsersTableViewController+SearchBar.swift in Sources */,
 				94EC5AA32205B60A00905893 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
