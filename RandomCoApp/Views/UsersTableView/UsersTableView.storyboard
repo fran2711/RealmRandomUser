@@ -59,7 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="pp1-Yv-LN4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="42o-3j-Xgn">
-                        <barButtonItem key="leftBarButtonItem" title="Favourite List" id="ZwY-FI-tnH">
+                        <barButtonItem key="leftBarButtonItem" title="Favorites" id="ZwY-FI-tnH">
                             <connections>
                                 <segue destination="iIJ-Iw-8GZ" kind="show" id="j5c-d9-7ER"/>
                             </connections>
