@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, UsersTableViewCellDelegate {
+
     
     // MARK: - TableViewDataSource and Delegates
     
@@ -24,7 +25,9 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        cell.cellDelegate = self
         cell.configureWith(user: DBManager.sharedInstance.getUserData()[indexPath.row])
+        cell.favouriteButton.tag = indexPath.row
         
         return cell
     }
@@ -32,5 +35,35 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedUser = DBManager.sharedInstance.getUserData()[indexPath.row]
         self.performSegue(withIdentifier: "ShowUserDetail", sender: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete else { return }
+        
+        let user = DBManager.sharedInstance.getUserData()[indexPath.row]
+        
+        DBManager.sharedInstance.deleteUserData(user: user)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    
+    // MARK: - Cell Delegate Methods
+    
+    func didPressFavouriteButton(sender: UIButton, indexPath: Int) {
+        if sender.isTouchInside {
+            print("Button tapped")
+            if sender.isSelected  {
+                let user = DBManager.sharedInstance.getUserData()[indexPath]
+                DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: false)
+                sender.isSelected = false
+            } else {
+                let user = DBManager.sharedInstance.getUserData()[indexPath]
+                DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: true)
+                sender.isSelected = true
+            }
+        }
+        
+
+        
     }
 }

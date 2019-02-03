@@ -22,7 +22,9 @@ class User: Object, Mappable {
     @objc dynamic var registrationDate: String = ""
     @objc dynamic var largeImage: String = ""
     @objc dynamic var thumbnail: String = ""
+    @objc dynamic var isFavorite: Bool = false
     @objc dynamic var id: String = ""
+    
     
     
     override static func primaryKey() -> String? {

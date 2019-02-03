@@ -9,12 +9,19 @@
 import UIKit
 import SDWebImage
 
+protocol UsersTableViewCellDelegate: class {
+    func didPressFavouriteButton(sender: UIButton, indexPath: Int)
+}
+
 class UsersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userPhoneLabel: UILabel!
+    @IBOutlet weak var favouriteButton: UIButton!
+    
+    var cellDelegate: UsersTableViewCellDelegate?
     
     func configureWith(user: User) {
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
@@ -29,4 +36,7 @@ class UsersTableViewCell: UITableViewCell {
 //        super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func favouriteButtonPressed(_ sender: UIButton) {
+        cellDelegate?.didPressFavouriteButton(sender: sender, indexPath: sender.tag)
+    }
 }

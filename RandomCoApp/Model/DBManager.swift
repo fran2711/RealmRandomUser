@@ -28,10 +28,19 @@ class DBManager {
         do {
             try dataBase.write {
                 dataBase.add(user, update: true)
-                print("user added: \(user)")
             }
         } catch let error as NSError {
             print("ERROR ADDING USER ----\n\(error)")
+        }
+    }
+    
+    func makeUserFavourite(user: User, isFavourite: Bool) {
+        do {
+            try dataBase.write {
+                user.isFavorite = isFavourite
+            }
+        }  catch let error as NSError {
+            print("ERROR MAKING FAVOURITE ----\n\(error)")
         }
     }
     
@@ -39,7 +48,6 @@ class DBManager {
         do {
             try dataBase.write {
                 dataBase.delete(user)
-                print("user deleted: \(user)")
             }
         } catch let error as NSError {
             print("ERROR DELETING USER ----\n\(error)")

@@ -20,9 +20,13 @@ class UsersTableViewController: UIViewController {
     let cellIdentifier = "CellForUsers"    
     var selectedUser: User?
     
+    var users: Results<User>?
+    
     override func viewDidLoad() {
-        super.viewDidLoad()        
-        callForUsers(actualPage)
+        super.viewDidLoad()
+        if DBManager.sharedInstance.getUserData().isEmpty {
+            callForUsers(actualPage)
+        }
     }
     
     func callForUsers(_ actualPage: Int) {
@@ -72,6 +76,5 @@ class UsersTableViewController: UIViewController {
             self.callForUsers(self.actualPage)
         }
     }
-    
 }
 

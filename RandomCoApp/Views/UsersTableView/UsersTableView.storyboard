@@ -53,43 +53,58 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Wx3-ld-iKb">
-                                                    <rect key="frame" x="103" y="11" width="256" height="20.5"/>
+                                                    <rect key="frame" x="103" y="11" width="256" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="VPB-xP-vIT">
-                                                    <rect key="frame" x="103" y="38.5" width="256" height="22"/>
+                                                    <rect key="frame" x="103" y="40.5" width="256" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDv-XD-wiz">
-                                                    <rect key="frame" x="103" y="67.5" width="256" height="20.5"/>
+                                                    <rect key="frame" x="103" y="65.5" width="226" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM9-1m-1tE">
+                                                    <rect key="frame" x="329" y="58.5" width="30" height="29.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="h6Y-iJ-kOr"/>
+                                                    </constraints>
+                                                    <state key="normal" image="like"/>
+                                                    <state key="selected" image="favourite_active"/>
+                                                    <connections>
+                                                        <action selector="favouriteButtonPressed:" destination="nWR-BE-O5o" eventType="touchUpInside" id="fwA-eu-57j"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FIt-RV-CQ5" firstAttribute="leading" secondItem="3IG-3r-Wkf" secondAttribute="leading" constant="16" id="4y3-uB-QVN"/>
-                                                <constraint firstItem="SDv-XD-wiz" firstAttribute="trailing" secondItem="Wx3-ld-iKb" secondAttribute="trailing" id="6Pr-DG-Qf5"/>
                                                 <constraint firstAttribute="bottom" secondItem="FIt-RV-CQ5" secondAttribute="bottom" constant="11.5" id="7Ps-Ry-Bb8"/>
                                                 <constraint firstItem="VPB-xP-vIT" firstAttribute="centerY" secondItem="FIt-RV-CQ5" secondAttribute="centerY" id="8aU-Zj-0EB"/>
                                                 <constraint firstItem="Wx3-ld-iKb" firstAttribute="leading" secondItem="FIt-RV-CQ5" secondAttribute="trailing" constant="10" id="Axs-0d-Oqo"/>
                                                 <constraint firstItem="VPB-xP-vIT" firstAttribute="leading" secondItem="Wx3-ld-iKb" secondAttribute="leading" id="Pls-1r-1pg"/>
                                                 <constraint firstItem="Wx3-ld-iKb" firstAttribute="top" secondItem="FIt-RV-CQ5" secondAttribute="top" id="Xv5-Uh-5aI"/>
+                                                <constraint firstItem="sM9-1m-1tE" firstAttribute="bottom" secondItem="SDv-XD-wiz" secondAttribute="bottom" id="YQ3-xW-FVh"/>
                                                 <constraint firstItem="SDv-XD-wiz" firstAttribute="bottom" secondItem="FIt-RV-CQ5" secondAttribute="bottom" id="ana-nH-e16"/>
+                                                <constraint firstItem="sM9-1m-1tE" firstAttribute="top" secondItem="VPB-xP-vIT" secondAttribute="bottom" id="av9-cD-FKY"/>
                                                 <constraint firstItem="FIt-RV-CQ5" firstAttribute="top" secondItem="3IG-3r-Wkf" secondAttribute="top" constant="11" id="dLB-tY-zvf"/>
                                                 <constraint firstItem="VPB-xP-vIT" firstAttribute="top" secondItem="Wx3-ld-iKb" secondAttribute="bottom" constant="7" id="g3K-lj-3nq"/>
+                                                <constraint firstItem="sM9-1m-1tE" firstAttribute="trailing" secondItem="VPB-xP-vIT" secondAttribute="trailing" id="hP2-HU-Lmi"/>
                                                 <constraint firstAttribute="trailing" secondItem="Wx3-ld-iKb" secondAttribute="trailing" constant="16" id="k8V-CH-qJm"/>
                                                 <constraint firstItem="VPB-xP-vIT" firstAttribute="trailing" secondItem="Wx3-ld-iKb" secondAttribute="trailing" id="r28-fe-Mka"/>
                                                 <constraint firstItem="SDv-XD-wiz" firstAttribute="top" secondItem="VPB-xP-vIT" secondAttribute="bottom" constant="7" id="sfI-rv-F5W"/>
                                                 <constraint firstItem="SDv-XD-wiz" firstAttribute="leading" secondItem="Wx3-ld-iKb" secondAttribute="leading" id="uHt-GX-0KD"/>
+                                                <constraint firstItem="sM9-1m-1tE" firstAttribute="leading" secondItem="SDv-XD-wiz" secondAttribute="trailing" id="wZM-aE-B44"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <viewLayoutGuide key="safeArea" id="U27-7p-Koy"/>
                                         <connections>
+                                            <outlet property="favouriteButton" destination="sM9-1m-1tE" id="yK3-aQ-fDD"/>
                                             <outlet property="profileImageView" destination="FIt-RV-CQ5" id="aH3-ef-AEb"/>
                                             <outlet property="userEmailLabel" destination="VPB-xP-vIT" id="AgA-zF-duq"/>
                                             <outlet property="userNameLabel" destination="Wx3-ld-iKb" id="GjC-Ag-kGS"/>
@@ -145,4 +160,8 @@
             <point key="canvasLocation" x="653" y="-23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favourite_active" width="83" height="83"/>
+        <image name="like" width="153" height="153"/>
+    </resources>
 </document>
