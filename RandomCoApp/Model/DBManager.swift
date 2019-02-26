@@ -57,4 +57,14 @@ class DBManager {
             print("ERROR DELETING USER ----\n\(error)")
         }
     }
+    
+    func deleteAll() {
+        do {
+            try dataBase.write {
+                dataBase.deleteAll()
+            }
+        } catch let error as NSError {
+            print("ERROR DELETING ALL ----\n\(error)")
+        }
+    }
 }

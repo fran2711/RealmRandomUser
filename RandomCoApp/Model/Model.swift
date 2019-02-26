@@ -46,7 +46,7 @@ class User: Object, Mappable {
         state <- map["location.state"]
         registrationDate <- map["registered.date"]
         largeImage <- map["picture.large"]
-        thumbnail <- map["picture.thumbnail"]
+        thumbnail <- map["picture.medium"]
         id <- map["login.uuid"]
     }
 }

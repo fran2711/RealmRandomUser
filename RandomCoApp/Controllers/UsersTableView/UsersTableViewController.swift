@@ -25,6 +25,8 @@ class UsersTableViewController: UIViewController {
         
         self.usersTableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
+//        DBManager.sharedInstance.deleteAll()
+        
         if DBManager.sharedInstance.getUserData().isEmpty {
             callForUsers(actualPage)
         }

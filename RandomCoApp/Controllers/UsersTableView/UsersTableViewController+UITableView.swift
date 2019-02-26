@@ -47,8 +47,13 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource, 
     // MARK: - Cell Delegate Methods
     func didPressFavouriteButton(sender: UIButton, indexPath: Int) {
         let user = DBManager.sharedInstance.getUserData()[indexPath]
-        DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: sender.isTouchInside)
-        sender.isSelected = user.isFavorite
+        
+        if sender.isTouchInside && user.isFavorite {
+            DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: false)
+        } else if sender.isTouchInside && !user.isFavorite {
+            DBManager.sharedInstance.makeUserFavourite(user: user, isFavourite: true)
+        }
+        
+        self.usersTableView.reloadData()
     }
-    
 }
